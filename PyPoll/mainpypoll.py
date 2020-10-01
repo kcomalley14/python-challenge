@@ -39,8 +39,21 @@ print(f"Total Votes: {total_votes}")
 print("------------------------")
 
 for candidate, votes in votecount.items():
-    print(f"{candidate}: {vote_percent[candidate]} + {votes}")
+    print(f"{candidate}: {vote_percent[candidate]} ({votes})")
 
 print("------------------------")
 print(f"Winner: {winner}")
 print("------------------------") 
+
+    # Save as text file
+election_results = os.path.join("Resources", "election_results.txt")
+with open(election_results, 'w') as text:
+    text.write("Election Results\n")
+    text.write("------------------------\n")
+    text.write(f"Total Votes: {total_votes}\n")
+    text.write("------------------------\n")
+    for candidate, votes in votecount.items():
+        text.write(f"{candidate}: {vote_percent[candidate]} ({votes})\n")
+    text.write("------------------------\n")
+    text.write(f"Winner: {winner}\n")
+    text.write("------------------------\n")

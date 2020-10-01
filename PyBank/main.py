@@ -56,4 +56,12 @@ print(f"Greatest Increase in Profits: {increase_month} (${highest_increase})")
 print(f"Greatest Decrease in Profits: {decrease_month} (${lowest_increase})")
 
     #Export text file of data printed
-
+budget_output = os.path.join("Resources", "budget_data.txt")
+with open("budget_data.txt", 'w') as text:
+    text.write("Financial Analysis\n")
+    text.write("-------------------------\n")
+    text.write(f"Total Months: {month_count}\n")
+    text.write(f"Total Net Earning: ${profit_losses}\n")
+    text.write(f"Average Change: $" + str(average_change)+'\n')
+    text.write(f"Greatest Increase in Profits: {increase_month} (${highest_increase})\n")
+    text.write(f"Greatest Decrease in Profits: {decrease_month} (${lowest_increase}\n")

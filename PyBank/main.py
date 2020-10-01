@@ -57,7 +57,7 @@ print(f"Greatest Decrease in Profits: {decrease_month} (${lowest_increase})")
 
     #Export text file of data printed
 budget_output = os.path.join("Resources", "budget_data.txt")
-with open("budget_data.txt", 'w') as text:
+with open(budget_output, 'w') as text:
     text.write("Financial Analysis\n")
     text.write("-------------------------\n")
     text.write(f"Total Months: {month_count}\n")

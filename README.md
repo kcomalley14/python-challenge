@@ -17,4 +17,4 @@ The pypoll code I wrote uses the loop function similarly to the PyBank function 
 
 By running the code, it will populate all of these values in the terminal, as well as print a text file in the resources folder for PyPoll.
 
-The extra exercises will be done at a later date for practice, after I understand Python more.
+The extra exercises will be done at a later date for practice.

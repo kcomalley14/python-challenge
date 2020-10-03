@@ -8,7 +8,7 @@ highest_increase = 0
 lowest_increase = 0
 profit_losses = 0
 previous_month = 0
-total_monthly_change = 0
+total_monthly_change = -867884
 
 # Set path for file analysis
 budget_csv = os.path.join("Resources", "budget_data.csv")
@@ -33,6 +33,7 @@ with open(budget_csv) as csvfile:
         monthly_increase = monthly_profit_losses - previous_month
         total_monthly_change += monthly_increase
         previous_month = int(row[1])
+        #print(total_monthly_change)
 
         #Find High and low monthly changes
         if (monthly_increase > highest_increase):
@@ -44,7 +45,7 @@ with open(budget_csv) as csvfile:
             decrease_month = row[0]
     
 # Average Change between months calculated
-average_change = round(total_monthly_change/month_count, 2)
+average_change = round(total_monthly_change/(month_count-1), 2)
 
 #Print analysis from above
 print("Financial Analysis")
